@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang = "ptbr">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time de Vôlei da Karasuno</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logocontainer">
+            <a href="#" id="logoLink">
+            <img class="img_logo" src="img/logo.karasuno.png" alt="Logo">
+            </a>
+        </div>
+        <div class="perfil">
+            <a href="#" id="perfilLink"></a>
+            <img class="img_perfil" src="img/perfil.eu.jpg" alt="eu">
+        </div>
+        <button class="perfiltexto">Seu perfil</button>
+        <span class="tres" onclick="abrirmenu()">&#9776;</span>
+    </header>
+    <div id="menu" class="menuicon">
+        <a href="javascript:void(0)" class="fecharmenu" onclick="fecharmenu()">&times;</a>
+        <a href="#home">Home</a>
+        <a href="#jogadores">Jogadores</a>
+        <a href="#gestao">Gestão</a>
+        <a href="#treinadores">Treinadores</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+    <main>
+        <p id="home" class="primeirotexto">
+            Jogadores do clube de vôlei da Karasuno:
+        </p>
+        <div class="linha">
+            <div class="coluna">
+                <img src="img/Icon_Daichi.png" onclick="abrirjanela();atualslide(1)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Suga.png" onclick="abrirjanela();atualslide(2)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Asahi.png" onclick="abrirjanela();atualslide(3)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Yu.png" onclick="abrirjanela();atualslide(4)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Tanaka.png" onclick="abrirjanela();atualslide(5)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Ennoshita.png" onclick="abrirjanela();atualslide(6)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Narita.png" onclick="abrirjanela();atualslide(7)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Kinoshita.jpg" onclick="abrirjanela();atualslide(8)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Tobio.png" onclick="abrirjanela();atualslide(9)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Shoyo.png" onclick="abrirjanela();atualslide(10)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Kei.png" onclick="abrirjanela();atualslide(11)" class="personagens">
+            </div>
+            <div class="coluna">
+                <img src="img/Icon_Tadashi.png" onclick="abrirjanela();atualslide(12)" class="personagens">
+            </div>
+        </div>
+
+            <div id="minhajanela" class="janela">
+                <span class="fecharcursor" onclick="fecharjanela()">&times;</span>
+                <div class="conteudojanela">
+                    <div class="meuslide">
+                        <div class="identificacao">1 / 12</div>
+                        <img src="img/Icon_Daichi.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">2 / 12</div>
+                        <img src="img/Icon_Suga.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">3 / 12</div>
+                        <img src="img/Icon_Asahi.png" style="width:50%">
+                    </div>          
+                    <div class="meuslide">
+                            <div class="identificacao">4 / 12</div>
+                            <img src="img/Icon_Yu.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">5 / 12</div>
+                        <img src="img/Icon_Tanaka.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">6 / 12</div>
+                        <img src="img/Icon_Ennoshita" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">7 / 12</div>
+                        <img src="img/Icon_Narita.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">8 / 12</div>
+                        <img src="img8/Chikara" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">9 / 12</div>
+                        <img src="img/Icon_Tobio.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">10 / 12</div>
+                        <img src="img/Icon_Shoyo.png" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">11 / 12</div>
+                        <img src="img1/Icon_Kei" style="width:50%">
+                    </div>
+                    <div class="meuslide">
+                        <div class="identificacao">12 / 12</div>
+                        <img src="img/Icon_Tadashi.png" style="width:50%">
+                    </div>
+                    <a class="anterior" onclick="passarslide(-1)">&#10094;</a>
+                    <a class="proximo" onclick="passarslide(1)">&#10095;</a>
+                    <div class="legendaconteiner">
+                        <p id="legenda"></p>
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Daichi.png" onclick="atualslide(1)" alt="Daichi Sawamura">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Suga.png" onclick="atualslide(2)" alt="Koshi Sugawara">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Asahi.png" onclick="atualslide(3)" alt="Asahi Azumane">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Yu.png" onclick="atualslide(4)" alt="Yu Nishinoya">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Tanaka.png" onclick="atualslide(5)" alt="Ryunosuke Tanaka">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Ennoshita.png" onclick="atualslide(6)" alt="Chikara Ennoshita">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Narita.png" onclick="atualslide(7)" alt="Kazuhito Narita">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Kinoshita.jpg" onclick="atualslide(8)" alt="Hisahi Kinoshita">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Tobio.png" onclick="atualslide(9)" alt="Tobio Kageyama">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Shoyo.png" onclick="atualslide(10)" alt="Shoyo Hinata">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Kei.png" onclick="atualslide(11)" alt="Kei Tsukishima">
+                    </div>
+                    <div class="coluna">
+                        <img class="mini" src="img/Icon_Tadashi.png" onclick="atualslide(12)" alt="Tadashi Yamaguchi">
+                    </div>
+                </div>
+            </div>
+    </main>
+        <div id="jogadores" class="textocolunas">
+            <div class="colunasub">
+                <h2>Daici Sawamura</h2>
+                <p>
+                    Terceiro ano na escola Karasuno.
+                    <br>
+                    Capitão e Atacante de Ponta do time de vôlei masculino da escola.
+                    <br> <br>
+                    Aparência:
+                    <br>
+                    Daichi possui cabelos curtos e escuros, seus olhos são castanhos escuros.
+                    <br> <br>
+                    Ele é geralmente visto com um sorriso gentil no rosto, porém ao se irritar seu olhar se torna completamente intimidador.
+                    <br> <br>
+                    Personalidade:
+                    <br>
+                    Daichi é um capitão responsável e cuidadoso que sempre coloca seu time na frente de tudo.
+                    <br>
+                    Ele também é muito paciente e compreende os outros, mas se torna assustador quando está com raiva, embora ele raramente mostre esse seu lado.
+                    <br> <br>
+                    Curiosidades:
+                    <br>
+                    Sua comida favorita é o Lamen de Shouyo.
+                    <br>
+                    De acordo com alguns extras feitos pelo Furudate, Daichi possui dois irmãos mais novos.
+                    <br> <br>
+                    No vôlei:
+                    <br>
+                    A arma de Daichi não é seu ataque, mas sua recepção sólida.
+                    <br>
+                    Ele é considerado um especialista defensivo e, com Nishinoya, é frequentemente encarregado de lidar com recebimentos difíceis (como o saque de Oikawa) ou cobrir os erros de outro companheiro de equipe.
+                    <br>
+                    Daichi também comandou mudanças de formação para cobrir os ataques oponentes.
+                    <br>
+                    Seu conhecimento do jogo resultou de ter que aprender muitas táticas sozinho durante o primeiro ano devido à falta de um treinador.
+                </p>
+            </div>
+    
+            <div class="colunasub">
+                <h2>Koshi Sugawara</h2>
+                <p>
+                    Terceiro ano na escola Karasuno.
+                    <br>
+                    Levantador e o Vice-Capitão do time de vôlei da escola.
+                    <br> <br>
+                    Aparência:
+                    <br>
+                    Sugawara possui uma altura mediana e um corpo magro.
+                    <br>
+                    Ele possui sobrancelhas ligeiramente grossas e seu cabelo é cinza, ele possui uma pinta de nascença abaixo do seu olho esquerdo.
+                    <br>
+                    Ele é normalmente visto com um sorriso gentil em seu rosto.
+                    <br> <br>
+                    Personalidade:
+                    <br>
+                    Sendo o vice-capitão, ele tem uma personalidade calma e gentil com os seus parceiros de time e age como um pilar de apoio para eles.
+                    <br>
+                    Mesmo que ele não seja mais o Levantador titular da Karasuno, ele não pensa em desistir de jogar. Assim, ele encoraja a si e aos seus companheiros a não desistir, não importa quão difícil seja a situação.
+                    <br>
+                    Ele também é bem perceptivo e inteligente, já que aparece com táticas úteis durante as partidas para que seus parceiros de time usem.
+                    <br>
+                    Ele também é bem orgulhoso, apesar de isso ser mostrado raramente.
+                    <br> <br>
+                    Curiosidades:
+                    <br>
+                    Sua comida favorita é Mapo Tofu Super Apimentado.
+                    <br>
+                    Vários de seus calouros são maiores que ele, o que o preocupa.
+                    <br>
+                    Sugawara usa tênis brancos com detalhes verdes/azuis.
+                    <br>
+                    Seu número de uniforme (2) simboliza sua posição como Levantador, já que o levantamento é normalmente o segundo toque no vôlei.
+                    <br> <br>
+                    No vôlei:
+                    <br>
+                    Quando não está em jogo, Sugawara presta bastante atenção ao modo o qual o time adversário joga, frequentemente podendo dar aos seus companheiros dicas de como derrotá-los.
+                    <br>
+                    Quando ele tem a chance de entrar, consegue transportar o que ele aprendeu enquanto assistia e melhorar o time em geral. No entanto, ele fica rapidamente estressado com o calor do jogo e acaba pensando muito nas coisas.
+                    <br>
+                    Por ele não jogar muito em partidas, Sugawara é um elemento desconhecido. Quando ele entra nas partidas, os outros times, que podem ter tido tempo para estudar um pouco a formação inicial, normalmente acabam não sabendo o que esperar dele, o que acaba sendo uma vantagem para a Karasuno.
+                </p>
+            </div>
+    
+            <div class="colunasub">
+                <h2>Yu Nishinoya</h2>
+                <p>
+                    Segundo ano da escola Karasuno.
+                    <br>
+                    Ele é membro do time de voleibol da escola e atua como o Líbero do time.
+                    <br>
+                    Seus colegas de time o apelidaram de Divino Guardião da Karasuno.
+                    <br> <br>
+                    Aparência:
+                    <br>
+                    Nishinoya é o membro mais baixo da equipe.
+                    <br>
+                    Costuma usar o cabelo despenteado e para cima, sendo parte do seu cabelo um pouco descolorido na frente.
+                    <br>
+                    Gosta de usar camisas com frases aleatórias.
+                    <br> <br>
+                    Personalidade:
+                    <br>
+                    Nishinoya é uma pessoa muito enérgica e temperamental.
+                    <br>
+                    Sua natureza turbulenta e peripécias malucas podem atrair atenção indesejada com bastante facilidade, o que geralmente vai mal para ele.
+                    <br>
+                    Embora ele raramente se preocupe com as consequências de seus atos (e pode até mesmo voltar à violência para descarregar sua raiva em certas ocasiões), ele é surpreendentemente atencioso com os sentimentos e inseguranças de seus amigos.
+                    <br>
+                    Nishinoya pode ser extremamente impaciente, excitável e impulsivo.
+                    <br>
+                    Ele não se preocupa em filtrar suas palavras e, portanto, está propenso a deixar escapar tudo o que está pensando em voz alta e sem tato.
+                    <br> <br>
+                    Curiosidades:
+                    <br>
+                    Embora ele exiba um incrível feito de confiança e destemor inúmeras vezes, Nishinoya admite para si que foi um "grande gato assustado" quando era criança.
+                    <br>
+                    Ele tem o hábito peculiar de inventar espontaneamente nomes ridículos para os movimentos que executa enquanto pratica os recebimentos.
+                    <br>
+                    Nishinoya gosta de ser chamado de "Senpai" (ou veterano na versão em português) e não gosta de meninos com muita atenção de meninas.
+                    <br>
+                    Ele também é inesperadamente tímido quando se trata de conversar com garotas que não conheceu antes.
+                    <br> <br>
+                    No vôlei:
+                    <br>
+                    No jogo, entretanto, sua atitude muda drasticamente conforme ele se torna incrivelmente focado e sério, permanecendo calmo e fazendo tudo ao seu alcance para fornecer o suporte de que sua equipe precisa até o final. Por isso, todos no clube de vôlei o respeitam muito.
+                    <br>
+                    Ele é incrivelmente trabalhador, uma vez que pratica continuamente mais de 200 recebimentos de bloqueio de espinhos a ponto de suas pernas pararem de se mover.
+                </p>
+            </div>
+        </div>   
+
+    <button id="gestao" class="acordiao">Gestão</button>
+    <div class="informacao">
+        <p>
+            Gestão formada por:
+            <br> <br>
+            Hitoka Yachi, primeiro ano, assistente da karasuno.
+            <br>
+            Kiyoko Shimizu, terceiro ano, assistente da karasuno.
+            <br>
+            Ittetsu Takeda, professor conselheiro, tecnico da karasuno.
+        </p>
+    </div>
+    <button id="treinadores" class="acordiao">Treinadores</button>
+    <div class="informacao">
+        <p>
+            Treinadores da Karasuno é formada por:
+            <br> <br>
+            Keishin Ukai, ex-jogador do Colégio Karasuno como um levantador reserva e neto de ikkei ukai.
+            <br>
+            Ikkei Ukai, após ser hospitalizado ele se aposentou e atualmente ele treina um time infantil..
+        </p>
+    </div> 
+    <button id="sobre" class="acordiao">Sobre</button>
+    <div class="informacao">
+        <p>
+            Karasuno, como a maioria das escolas japonesas, tem um uniforme e código de vestimenta.
+            <br> <br>
+            O uniforme masculino consiste no gakuran preto clássico, camisa de colarinho branco, um suéter claro e calças pretas.
+            <br>
+            As garotas usam um uniforme mais "católico", que consiste em uma blusa branca, uma fita vermelha, um suéter, o blazer preto, e uma saia cinza.
+            <br> <br>
+            No entanto, muitos estudantes são muitas vezes vistos sem o suéter e vestindo camisetas diversas no lugar da camisa com gola, é assumido que o código de vestimenta não é tão rigoroso.
+            <br> <br>
+            O uniforme do time masculino de vôlei consiste em um agasalho preto com detalhes em branco.
+            <br>
+            Os membros usam uma camiseta branca e shorts preto durante os treinos e partidas não oficiais e as vezes um colete amarelo por cima.
+            <br> <br>
+            Durante partidas oficiais os jogadores usam um uniforme preto com detalhes laranja.
+            <br>
+            O líbero usa o uniforme laranja com detalhes pretos e existem ocasiões que o time e o líbero invertem as cores.
+        </p>
+    </div>
+    <footer id="contato">
+        <div class="social">
+            <li><a href="https://web.facebook.com/profile.php?id=100073488566038">Facebook</a></li>
+        </div>
+        <div class="social">
+            <li><a href="https://x.com/__mynameisants_">Twitter</a></li>
+        </div>
+        <div class="social">
+            <li><a href="https://www.instagram.com/__.cristall.__/">Instagram</a></li>
+        </div>
+        <div class="social">
+            <li><a href="https://www.linkedin.com/in/sky-crizosti-127b9a25b/">Linkedin</a></li>
+        </div>
+    </footer>
+</body>
+<script src="main.js"></script>
+</html>
